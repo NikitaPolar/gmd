@@ -2,6 +2,7 @@ let exampleScript2 = {};
 
 
 exampleScript2.OnUpdate = () => {
-        console.log('dada');
-		Engine.OnceAt(1);
+    if(Engine.OnceAt(1)) {
+        console.log('hi');
+    }
 RegisterScript(exampleScript2);
