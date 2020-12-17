@@ -1,14 +1,12 @@
-let exampleScript = {};
+let exampleScript2 = {};
 
 
-exampleScript.OnUpdate = () => {
-		console.log('wait');
-		if(Engine.OnceAt(1)) {
-			let players = EntitySystem.GetPlayersList();
+exampleScript2.OnUpdate = () => {
+	setInterval(() => {
+        let players = EntitySystem.GetPlayersList();
 			
 			for(let player of players) {
 				console.log(player.GetPlayerSelectedHeroName());
 			}
-		}
-};
-RegisterScript(exampleScript);
+    }, 1500);
+RegisterScript(exampleScript2);
